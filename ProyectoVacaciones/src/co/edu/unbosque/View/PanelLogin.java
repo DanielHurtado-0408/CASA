@@ -22,7 +22,8 @@ public class PanelLogin extends JPanel{
 	private JTextField txtUsuario;
 	private JTextField txtContraseña;
 	private JLabel msj1;
-	private JLabel msj2;
+	private JButton btnClickHere;
+	private JLabel msj3;
 	private JButton btnSignUp;
 
 	
@@ -58,18 +59,25 @@ public class PanelLogin extends JPanel{
 		add(txtContraseña);
 		
 		msj1 = new JLabel("Forgot Password?");
-		msj1.setForeground(Color.WHITE);// darle color a la etiqueta
+		msj1.setForeground(Color.white);// darle color a la letra 
 		msj1.setBounds(165,372,130,20);
 		msj1.setFont(new java.awt.Font("Calibri light",Font.PLAIN,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(msj1); 
 		
 		
-		msj2 = new JLabel("Click here");
-		msj2.setForeground(Color.WHITE);// darle color a la etiqueta
-		msj2.setBounds(265,370,130,20);
-		msj2.setFont(new java.awt.Font("Arial",Font.BOLD,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
-		add(msj2); 
+		msj3 = new JLabel("Click Here");
+		msj3.setForeground(Color.WHITE);// darle color a la etiqueta
+		msj3.setBounds(266,370,130,20);
+		msj3.setFont(new java.awt.Font("Arial",Font.BOLD,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		add(msj3); 
 		
+		btnClickHere = new JButton("");
+		btnClickHere.setBounds(245,370,100,20);
+		btnClickHere.setOpaque(false);
+		btnClickHere.setBorderPainted(false);
+		btnClickHere.setBackground(Color.white);
+		btnClickHere.setFont(new java.awt.Font("Arial",Font.BOLD,12));
+		add(btnClickHere);
 		
 		btnSignUp = new JButton("SIGN UP");
 		btnSignUp.setBounds(155, 330,180,30);
@@ -109,12 +117,20 @@ public class PanelLogin extends JPanel{
 		this.msj1 = msj1;
 	}
 
-	public JLabel getMsj2() {
-		return msj2;
+	public JButton getBtnClickHere() {
+		return btnClickHere;
 	}
 
-	public void setMsj2(JLabel msj2) {
-		this.msj2 = msj2;
+	public void setBtnClickHere(JButton btnClickHere) {
+		this.btnClickHere = btnClickHere;
+	}
+
+	public JLabel getMsj3() {
+		return msj3;
+	}
+
+	public void setMsj3(JLabel msj3) {
+		this.msj3 = msj3;
 	}
 
 	public JButton getBtnSignUp() {
