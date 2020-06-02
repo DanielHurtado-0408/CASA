@@ -23,6 +23,8 @@ public class PanelSignUpUsuario extends JPanel{
 	private JTextField txtConfirmarContraseña;
 	private JButton btnSignUp;
 	
+	public static final String SAVE = "SAVE";
+	
 	
 	
 	
@@ -76,9 +78,10 @@ public class PanelSignUpUsuario extends JPanel{
 		add(txtConfirmarContraseña);	
 		
 		
-		btnSignUp = new JButton("SIGN UP");
+		btnSignUp = new JButton("SAVE");
 		btnSignUp.setBounds(125, 390,180,30);
 		btnSignUp.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		btnSignUp.setActionCommand(SAVE);
 		add(btnSignUp);
 	}
 
@@ -123,6 +126,16 @@ public class PanelSignUpUsuario extends JPanel{
 	}
 
 
+	public JLabel getSignUpLabel() {
+		return signUp;
+	}
+
+
+	public void setSignUp(JLabel signUp) {
+		this.signUp = signUp;
+	}
+
+
 	public JButton getBtnSignUp() {
 		return btnSignUp;
 	}
@@ -131,7 +144,18 @@ public class PanelSignUpUsuario extends JPanel{
 	public void setBtnSignUp(JButton btnSignUp) {
 		this.btnSignUp = btnSignUp;
 	}
+
+
+	public static String getSignUp() {
+		return SAVE;
+	}
+
+
+	public static String getSave() {
+		return SAVE;
+	}
 	
+
 	
 	
 		
