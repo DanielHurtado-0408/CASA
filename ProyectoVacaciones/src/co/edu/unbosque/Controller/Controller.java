@@ -11,12 +11,12 @@ import co.edu.unbosque.View.View;
 public class Controller implements ActionListener{
 	
 	private View view;
-	private Mundo m;
+	private Mundo mundo;
 
 	public Controller() {
 		
 		view = new View(this);
-		m = new Mundo();
+		mundo = new Mundo();
 		this.setActionListener();
 	}
 	
@@ -45,8 +45,8 @@ public class Controller implements ActionListener{
 			String correo = view.getVentanaPrincipal().getPanelSignUpUsuario().getTxtCorreo().getText();
 			String contraseña = view.getVentanaPrincipal().getPanelSignUpUsuario().getTxtContraseña().getText();
 			
-			m.getUsuarioDAO().agregarUsuario(nombre, correo, contraseña);
-			m.getBd().leerArchivo(m.getUsuarioDAO().getUsuarios()).forEach(System.out::println);
+			mundo.getUsuarioDAO().agregarUsuario(nombre, correo, contraseña);
+			mundo.getBd().leerArchivo(mundo.getUsuarioDAO().getUsuarios()).forEach(System.out::println);
 		}
 	}
 
