@@ -2,7 +2,10 @@ package co.edu.unbosque.View;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,6 +25,9 @@ public class PanelSignUpUsuario extends JPanel{
 	private JTextField txtContraseña;
 	private JTextField txtConfirmarContraseña;
 	private JButton btnSignUp;
+	private JButton btnRegresar;
+	private ImageIcon imagen;
+	private Icon icono;
 	
 	public static final String SAVE = "SAVE";
 	
@@ -83,6 +89,12 @@ public class PanelSignUpUsuario extends JPanel{
 		btnSignUp.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		btnSignUp.setActionCommand(SAVE);
 		add(btnSignUp);
+		
+		btnRegresar = new JButton();
+		btnRegresar.setBounds(330,440,30,20);
+		imagen = new ImageIcon(getClass().getResource("regresar.jpg"));
+		icono = new ImageIcon(imagen.getImage().getScaledInstance(btnRegresar.getWidth(), btnRegresar.getHeight(), Image.SCALE_DEFAULT));
+		add(btnRegresar);
 	}
 
 
@@ -154,6 +166,39 @@ public class PanelSignUpUsuario extends JPanel{
 	public static String getSave() {
 		return SAVE;
 	}
+
+
+	public JButton getBtnRegresar() {
+		return btnRegresar;
+	}
+
+
+	public void setBtnRegresar(JButton btnRegresar) {
+		this.btnRegresar = btnRegresar;
+	}
+
+
+	public ImageIcon getImagen() {
+		return imagen;
+	}
+
+
+	public void setImagen(ImageIcon imagen) {
+		this.imagen = imagen;
+	}
+
+
+	public Icon getIcono() {
+		return icono;
+	}
+
+
+	public void setIcono(Icon icono) {
+		this.icono = icono;
+	}
+
+
+
 	
 
 	

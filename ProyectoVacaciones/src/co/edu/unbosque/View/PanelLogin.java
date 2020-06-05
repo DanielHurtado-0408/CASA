@@ -25,6 +25,7 @@ public class PanelLogin extends JPanel{
 	private JButton btnClickHere;
 	private JLabel msj3;
 	private JButton btnSignUp;
+	private JButton btnSignIn;
 
 	
 	public  PanelLogin() {		
@@ -80,10 +81,15 @@ public class PanelLogin extends JPanel{
 		add(btnClickHere);
 		
 		btnSignUp = new JButton("SIGN UP");
-		btnSignUp.setBounds(155, 330,180,30);
+		btnSignUp.setBounds(155, 330,90,30);
 		btnSignUp.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(btnSignUp);
-	}
+	
+	    btnSignIn = new JButton("SIGN IN");
+	    btnSignIn.setBounds(245, 330,90,30);
+	    btnSignIn.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+	    add(btnSignIn);
+}
 
 	public JLabel getLogin() {
 		return login;
@@ -140,6 +146,15 @@ public class PanelLogin extends JPanel{
 	public void setBtnSignUp(JButton btnSignUp) {
 		this.btnSignUp = btnSignUp;
 	}
+
+	public JButton getBtnSignIn() {
+		return btnSignIn;
+	}
+
+	public void setBtnSignIn(JButton btnSignIn) {
+		this.btnSignIn = btnSignIn;
+	}
+	
 	
 	
 	

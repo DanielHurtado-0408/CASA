@@ -92,7 +92,7 @@ public class UsuarioDAO {
 		String mensaje = "";
 			UsuarioDTO usuario= new UsuarioDTO(nombre, correo, contraseña);
 			Usuarios.add(usuario);
-			mensaje = "El gamer: " + usuario + "fue agregado";
+			mensaje = "El usuario: " + usuario + "fue agregado";
 			archivos.escribirArchivo(Usuarios);
 			return mensaje;
 		}
