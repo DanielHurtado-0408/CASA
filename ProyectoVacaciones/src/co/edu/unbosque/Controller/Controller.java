@@ -74,12 +74,12 @@ public class Controller implements ActionListener{
 			
 			if((validarLogin == true) && (validarLlenaCamposLogin == true)) {
 				JOptionPane.showMessageDialog(null, "Usuario ingreso correctamente");
-				/*
-				 * view.getVentanaPrincipal().getPanelSignUpUsuario().setVisible(true);
-				 * view.getVentanaPrincipal().remove(view.getVentanaPrincipal().getPanelLogin())
-				 * ; view.getVentanaPrincipal().getContentPane().add(view.getVentanaPrincipal().
-				 * getPanelSignUpUsuario()); view.getVentanaPrincipal().repaint();
-				 */
+				
+				  view.getVentanaPrincipal().getPanelUsuario().setVisible(true);
+				  view.getVentanaPrincipal().remove(view.getVentanaPrincipal().getPanelLogin());
+				  view.getVentanaPrincipal().getContentPane().add(view.getVentanaPrincipal().getPanelUsuario()); 
+				  view.getVentanaPrincipal().repaint();
+				 
 			}
 			else {
 				
