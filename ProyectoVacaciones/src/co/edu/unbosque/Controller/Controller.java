@@ -27,9 +27,10 @@ public class Controller implements ActionListener{
 		
 		view.getVentanaPrincipal().getPanelSignUpUsuario().getBtnSignUp().addActionListener(this);
 		view.getVentanaPrincipal().getPanelSignUpUsuario().getBtnRegresar().addActionListener(this);
+		
+		view.getVentanaPrincipal().getPanelUsuario().getBtnComprar().addActionListener(this);
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
@@ -48,6 +49,17 @@ public class Controller implements ActionListener{
 			view.getVentanaPrincipal().getContentPane().add(view.getVentanaPrincipal().getPanelLogin());
 			view.getVentanaPrincipal().repaint();
 		}
+		if(e.getSource() == view.getVentanaPrincipal().getPanelUsuario().getBtnComprar()) {
+			comprarProductos();
+		}
+	}
+	
+	public void comprarProductos() {
+		
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem() == "Tecnologia") {
+			//view.getVentanaPrincipal().getPanelUsuario().getImagenCategoriasString(). 
+		}
+		
 	}
 	
 	public void loginUsuario() {

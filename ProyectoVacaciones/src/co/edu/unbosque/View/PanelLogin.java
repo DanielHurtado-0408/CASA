@@ -41,8 +41,8 @@ public class PanelLogin extends JPanel{
 		
 		login = new JLabel("LOGIN");
 		login.setForeground(Color.WHITE);// darle color a la etiqueta
-		login.setBounds(200,100,100,100);
-		login.setFont(new java.awt.Font("Calibri light",1,30));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		login.setBounds(190,100,150,100);
+		login.setFont(new java.awt.Font("Arial Rounded MT Bold",1,30));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(login); 
 		
 		txtUsuario = new JTextField();
@@ -61,15 +61,15 @@ public class PanelLogin extends JPanel{
 		
 		msj1 = new JLabel("Forgot Password?");
 		msj1.setForeground(Color.white);// darle color a la letra 
-		msj1.setBounds(165,372,130,20);
-		msj1.setFont(new java.awt.Font("Calibri light",Font.PLAIN,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		msj1.setBounds(165,371,130,20);
+		msj1.setFont(new java.awt.Font("Arial Rounded MT Bold",Font.PLAIN,10));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(msj1); 
 		
 		
 		msj3 = new JLabel("Click Here");
 		msj3.setForeground(Color.WHITE);// darle color a la etiqueta
 		msj3.setBounds(266,370,130,20);
-		msj3.setFont(new java.awt.Font("Arial",Font.BOLD,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		msj3.setFont(new java.awt.Font("Arial Rounded MT Bold",Font.BOLD,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(msj3); 
 		
 		btnClickHere = new JButton("");

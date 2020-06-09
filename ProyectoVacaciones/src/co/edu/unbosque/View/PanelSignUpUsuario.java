@@ -48,7 +48,7 @@ public class PanelSignUpUsuario extends JPanel{
 		signUp = new JLabel("SIGN UP");
 		signUp.setForeground(Color.WHITE);// darle color a la etiqueta
 		signUp.setBounds(155,80,200,100);
-		signUp.setFont(new java.awt.Font("Calibri light",1,35));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		signUp.setFont(new java.awt.Font("Arial Rounded MT Bold",1,35));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(signUp); 
 		
 		
