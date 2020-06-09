@@ -1,8 +1,11 @@
 package co.edu.unbosque.Controller;
 
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import co.edu.unbosque.Model.Mundo;
@@ -50,15 +53,24 @@ public class Controller implements ActionListener{
 			view.getVentanaPrincipal().repaint();
 		}
 		if(e.getSource() == view.getVentanaPrincipal().getPanelUsuario().getBtnComprar()) {
-			comprarProductos();
+			seleccionarCategorias();
 		}
 	}
 	
-	public void comprarProductos() {
+	public void seleccionarCategorias() {
+
+		ImageIcon imagenCategorias;
+		Icon imagen2Categorias;
+		ImageIcon imagenSubcategorias;
+		Icon imagen2Subcategorias;
 		
-		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem() == "Tecnologia") {
-			//view.getVentanaPrincipal().getPanelUsuario().getImagenCategoriasString(). 
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Tecnologia") {
+			imagenCategorias = new ImageIcon("src/imagenes/tecnologia.png");
+			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(100, 60, Image.SCALE_DEFAULT));
+			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
 		}
+		
+		
 		
 	}
 	

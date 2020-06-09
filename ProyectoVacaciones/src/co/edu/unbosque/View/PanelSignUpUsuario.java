@@ -28,6 +28,7 @@ public class PanelSignUpUsuario extends JPanel{
 	private JButton btnRegresar;
 	private ImageIcon imagen;
 	private Icon icono;
+	private JLabel imagenBtn;
 	
 	public static final String SAVE = "SAVE";
 	
@@ -91,9 +92,10 @@ public class PanelSignUpUsuario extends JPanel{
 		add(btnSignUp);
 		
 		btnRegresar = new JButton();
-		btnRegresar.setBounds(330,440,30,20);
-		imagen = new ImageIcon(getClass().getResource("regresar.jpg"));
-		icono = new ImageIcon(imagen.getImage().getScaledInstance(btnRegresar.getWidth(), btnRegresar.getHeight(), Image.SCALE_DEFAULT));
+		btnRegresar.setBounds(330,440,40,30);
+		imagen = new ImageIcon(("src/imagenes/regresar.png"));
+		icono = new ImageIcon(imagen.getImage().getScaledInstance(40, 30, Image.SCALE_DEFAULT));
+		btnRegresar.setIcon(icono);
 		add(btnRegresar);
 	}
 

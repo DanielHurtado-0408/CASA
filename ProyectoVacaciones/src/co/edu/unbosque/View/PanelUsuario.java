@@ -33,18 +33,12 @@ public class PanelUsuario extends JPanel{
 		
 	private JComboBox<String> categorias;
 	private JLabel imagenCategorias;
-	private ImageIcon imagenCategorias1;
-	private Icon imagen2Categorias;
 	
 	private JComboBox<String> subcategorias;
 	private JLabel imagenSubcategorias;
-	private ImageIcon imagenSubcategorias1;
-	private Icon imagen2Subcategorias;
 
 	private JComboBox<String> tiendas;
 	private JLabel imagenAlmacen;
-	private ImageIcon imagenAlmacenes1;
-	private Icon imagen2Almacenes;
 
 	private JComboBox<String>productos;
 
@@ -76,8 +70,8 @@ public class PanelUsuario extends JPanel{
 		add(enunciado1); 
 		
 		logotipo1 = new JLabel();
-		logotipo1.setBounds(250,60,130,80);
-		imagenLogotipo1=new ImageIcon(getClass().getResource("logotipo1.jpg"));
+		logotipo1.setBounds(255,60,130,80);
+		imagenLogotipo1=new ImageIcon(("src/imagenes/logotipo.jpg"));
 		imagen2Logotipo1 = new ImageIcon(imagenLogotipo1.getImage().getScaledInstance(130, 80, Image.SCALE_DEFAULT));
 		logotipo1.setIcon(imagen2Logotipo1);
 		add(logotipo1);
@@ -124,25 +118,16 @@ public class PanelUsuario extends JPanel{
 		
 		imagenCategorias = new JLabel();
 		imagenCategorias.setBounds(265,170,100,60);
-		imagenCategorias1=new ImageIcon(getClass().getResource(imagenCategoriasString));
-		imagen2Categorias = new ImageIcon(imagenCategorias1.getImage().getScaledInstance(100, 60, Image.SCALE_DEFAULT));
-		imagenCategorias.setIcon(imagen2Categorias);
 		add(imagenCategorias);	
 		
 		
 		imagenSubcategorias = new JLabel();
 		imagenSubcategorias.setBounds(265,245,100,60);
-		imagenSubcategorias1=new ImageIcon(getClass().getResource(imagenSubcategoriasString));
-		imagen2Subcategorias = new ImageIcon(imagenSubcategorias1.getImage().getScaledInstance(100, 60, Image.SCALE_DEFAULT));
-		imagenSubcategorias.setIcon(imagen2Subcategorias);
 		add(imagenSubcategorias);
 		
 		
 		imagenAlmacen = new JLabel();
 		imagenAlmacen.setBounds(265,320,100,60);
-		imagenAlmacenes1=new ImageIcon(getClass().getResource(imagenAlmacenesString));
-		imagen2Almacenes = new ImageIcon(imagenAlmacenes1.getImage().getScaledInstance(100, 60, Image.SCALE_DEFAULT));
-		imagenAlmacen.setIcon(imagen2Almacenes);
 		add(imagenAlmacen);
 		
 		
@@ -208,22 +193,6 @@ public class PanelUsuario extends JPanel{
 		this.imagenCategorias = imagenCategorias;
 	}
 
-	public ImageIcon getImagenCategorias1() {
-		return imagenCategorias1;
-	}
-
-	public void setImagenCategorias1(ImageIcon imagenCategorias1) {
-		this.imagenCategorias1 = imagenCategorias1;
-	}
-
-	public Icon getImagen2Categorias() {
-		return imagen2Categorias;
-	}
-
-	public void setImagen2Categorias(Icon imagen2Categorias) {
-		this.imagen2Categorias = imagen2Categorias;
-	}
-
 	public JComboBox<String> getSubcategorias() {
 		return subcategorias;
 	}
@@ -240,22 +209,6 @@ public class PanelUsuario extends JPanel{
 		this.imagenSubcategorias = imagenSubcategorias;
 	}
 
-	public ImageIcon getImagenSubcategorias1() {
-		return imagenSubcategorias1;
-	}
-
-	public void setImagenSubcategorias1(ImageIcon imagenSubcategorias1) {
-		this.imagenSubcategorias1 = imagenSubcategorias1;
-	}
-
-	public Icon getImagen2Subcategorias() {
-		return imagen2Subcategorias;
-	}
-
-	public void setImagen2Subcategorias(Icon imagen2Subcategorias) {
-		this.imagen2Subcategorias = imagen2Subcategorias;
-	}
-
 	public JComboBox<String> getTiendas() {
 		return tiendas;
 	}
@@ -270,22 +223,6 @@ public class PanelUsuario extends JPanel{
 
 	public void setImagenAlmacen(JLabel imagenAlmacen) {
 		this.imagenAlmacen = imagenAlmacen;
-	}
-
-	public ImageIcon getImagenAlmacenes1() {
-		return imagenAlmacenes1;
-	}
-
-	public void setImagenAlmacenes1(ImageIcon imagenAlmacenes1) {
-		this.imagenAlmacenes1 = imagenAlmacenes1;
-	}
-
-	public Icon getImagen2Almacenes() {
-		return imagen2Almacenes;
-	}
-
-	public void setImagen2Almacenes(Icon imagen2Almacenes) {
-		this.imagen2Almacenes = imagen2Almacenes;
 	}
 
 	public JComboBox<String> getProductos() {
