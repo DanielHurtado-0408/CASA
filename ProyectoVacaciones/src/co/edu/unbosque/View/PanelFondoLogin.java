@@ -14,7 +14,7 @@ public class PanelFondoLogin extends JPanel{
 	
 	public PanelFondoLogin() {
 		
-		imagen = new ImageIcon(("src/imagenes/Fondo2.jpg"));
+		imagen = new ImageIcon(("src/imagenes/Fondo3.jpg"));
 		setSize(imagen.getIconWidth(), imagen.getIconHeight());
 	}
 	

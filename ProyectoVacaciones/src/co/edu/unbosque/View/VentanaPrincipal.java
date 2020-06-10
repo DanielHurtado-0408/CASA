@@ -45,7 +45,7 @@ public class VentanaPrincipal extends JFrame{
 		panelSignUpUsuario.setBounds(20, 20, 450, 550);
 		
 		panelUsuario = new PanelUsuario();
-		panelUsuario.setBounds(20,20,450,550);
+		panelUsuario.setBounds(20,20,700,600);
 		
 		
 		add(panelLogin);

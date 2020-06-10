@@ -61,16 +61,34 @@ public class Controller implements ActionListener{
 
 		ImageIcon imagenCategorias;
 		Icon imagen2Categorias;
-		ImageIcon imagenSubcategorias;
-		Icon imagen2Subcategorias;
+
 		
-		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Tecnologia") {
-			imagenCategorias = new ImageIcon("src/imagenes/tecnologia.png");
-			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(100, 60, Image.SCALE_DEFAULT));
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Videojuegos") {
+			imagenCategorias = new ImageIcon("src/imagenes/videojuegos5.jpg");
+			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(100, 150, Image.SCALE_DEFAULT));
 			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
 		}
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Computadores") {
+			imagenCategorias = new ImageIcon("src/imagenes/computadores.jpg");
+			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT));
+			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
+		}
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Contenido Audiovisual") {
+			imagenCategorias = new ImageIcon("src/imagenes/audiovisuales.jpg");
+			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT));
+			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
+		}
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Viajes") {
+			imagenCategorias = new ImageIcon("src/imagenes/viajes2.jpg");
+			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT));
+			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
+		}
+	}
+	
+	public void seleccionarSubcategorias(){
 		
-		
+		ImageIcon imagenSubcategorias;
+		Icon imagen2Subcategorias;
 		
 	}
 	

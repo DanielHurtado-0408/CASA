@@ -61,16 +61,16 @@ public class PanelUsuario extends JPanel{
 		this.setOpaque(false);
 		setBorder( new CompoundBorder( new EmptyBorder( 40, 40, 60, 45 ), new TitledBorder("") ) );
 		
-		enunciado1 = new JTextArea("COMPRAS ONLINE" + "\n" + "        MY APP");
+		enunciado1 = new JTextArea("EXPERIENCIAS ONLINE" + "\n" + "        MY APP");
 		enunciado1.setForeground(Color.WHITE);// darle color a la etiqueta
-		enunciado1.setBounds(50,80,200,100);
+		enunciado1.setBounds(50,80,250,100);
 		enunciado1.setOpaque(false);
 		enunciado1.setEditable(false);
 		enunciado1.setFont(new java.awt.Font("Arial Rounded MT Bold",1,20));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(enunciado1); 
 		
 		logotipo1 = new JLabel();
-		logotipo1.setBounds(255,60,130,80);
+		logotipo1.setBounds(285,60,130,80);
 		imagenLogotipo1=new ImageIcon(("src/imagenes/logotipo.jpg"));
 		imagen2Logotipo1 = new ImageIcon(imagenLogotipo1.getImage().getScaledInstance(130, 80, Image.SCALE_DEFAULT));
 		logotipo1.setIcon(imagen2Logotipo1);
@@ -78,27 +78,27 @@ public class PanelUsuario extends JPanel{
 		
 		
 		categorias = new  JComboBox<String>();
-		categorias.setBounds(80, 190, 100,30);
+		categorias.setBounds(80, 190, 120,30);
 		categorias.setOpaque(false);
 		categorias.addItem("Categoria");
-		categorias.addItem("Tecnologia");
-		categorias.addItem("Casa");
+		categorias.addItem("Videojuegos");
+		categorias.addItem("Computadores");
+		categorias.addItem("Contenido Audiovisual");
+		categorias.addItem("Viajes");
 		categorias.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(categorias);
 		
 		
 		subcategorias = new  JComboBox<String>();
-		subcategorias.setBounds(80, 260, 100,30);
+		subcategorias.setBounds(415, 190, 120,30);
 		subcategorias.setOpaque(false);
 		subcategorias.addItem("Subcategoria");
-		subcategorias.addItem("Celulares");
-		subcategorias.addItem("Computadores");
 		subcategorias.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(subcategorias);
 		
 		
 		tiendas = new  JComboBox<String>();
-		tiendas.setBounds(80, 330, 100,30);
+		tiendas.setBounds(765, 190, 120,30);
 		tiendas.setOpaque(false);
 		tiendas.addItem("Tienda");
 		tiendas.addItem("Samgsung");
@@ -108,7 +108,7 @@ public class PanelUsuario extends JPanel{
 		
 
 		productos = new  JComboBox<String>();
-		productos.setBounds(80, 400, 100,30);
+		productos.setBounds(1130, 190, 120,30);
 		productos.setOpaque(false);
 		productos.addItem("Producto");
 		productos.addItem("IPHONE 11");
@@ -117,25 +117,25 @@ public class PanelUsuario extends JPanel{
 		add(productos);
 		
 		imagenCategorias = new JLabel();
-		imagenCategorias.setBounds(265,170,100,60);
+		imagenCategorias.setBounds(80,280,200,150);
 		add(imagenCategorias);	
 		
 		
 		imagenSubcategorias = new JLabel();
-		imagenSubcategorias.setBounds(265,245,100,60);
+		imagenSubcategorias.setBounds(415,280,200,150);
 		add(imagenSubcategorias);
 		
 		
 		imagenAlmacen = new JLabel();
-		imagenAlmacen.setBounds(265,320,100,60);
+		imagenAlmacen.setBounds(765,280,200,150);
 		add(imagenAlmacen);
 		
 		
 	    infoProducto = new JTextArea("Informacion del producto: ");//se puede meter dos numeros (1: filas y 2:columnas) y si pongo un texto entre comillas es un texto predeterminado
-	    infoProducto.setBounds(255,390,120,70);
+	    infoProducto.setBounds(1100,260,200,70);
 	    infoProducto.setForeground(Color.WHITE);
 	    infoProducto.setOpaque(false);
-	    infoProducto.setFont(new java.awt.Font("Arial",1,9));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+	    infoProducto.setFont(new java.awt.Font("Arial",1,12));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(infoProducto);
 		
 		
