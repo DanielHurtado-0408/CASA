@@ -21,6 +21,7 @@ public class Controller implements ActionListener{
 		view = new View(this);
 		mundo = new Mundo();
 		this.setActionListener();
+
 	}
 	
 	public void setActionListener() {
@@ -66,11 +67,6 @@ public class Controller implements ActionListener{
 		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Videojuegos") {
 			imagenCategorias = new ImageIcon("src/imagenes/videojuegos5.jpg");
 			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(100, 150, Image.SCALE_DEFAULT));
-			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
-		}
-		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Computadores") {
-			imagenCategorias = new ImageIcon("src/imagenes/computadores.jpg");
-			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT));
 			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
 		}
 		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Contenido Audiovisual") {

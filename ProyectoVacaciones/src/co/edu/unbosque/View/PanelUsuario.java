@@ -14,12 +14,16 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
+import co.edu.unbosque.Model.Mundo;
+
 public class PanelUsuario extends JPanel{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private Mundo mundo;
 
 	private String imagenCategoriasString;
 	private String imagenSubcategoriasString;
@@ -51,11 +55,14 @@ public class PanelUsuario extends JPanel{
 		imagenSubcategoriasString = "";
 		imagenAlmacenesString = "";
 		
+		mundo = new Mundo();
+		
 		setLayout(null);
 		inicializarComponentes();
 		setVisible(false);//esta mierda es obligatoria
 		}
 	
+	@SuppressWarnings("unchecked")
 	public void inicializarComponentes() {
 		
 		this.setOpaque(false);
@@ -76,15 +83,14 @@ public class PanelUsuario extends JPanel{
 		logotipo1.setIcon(imagen2Logotipo1);
 		add(logotipo1);
 		
-		
+
 		categorias = new  JComboBox<String>();
 		categorias.setBounds(80, 190, 120,30);
 		categorias.setOpaque(false);
-		categorias.addItem("Categoria");
-		categorias.addItem("Videojuegos");
-		categorias.addItem("Computadores");
-		categorias.addItem("Contenido Audiovisual");
-		categorias.addItem("Viajes");
+		categorias.addItem("Categorias");
+		for(int i = 0; i<mundo.getUsuarioDAO().getUsuarios().size(); i++) {
+			categorias.addItem(mundo.getUsuarioDAO().getUsuarios().get(i).getNombre());
+			}
 		categorias.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(categorias);
 		
@@ -144,7 +150,7 @@ public class PanelUsuario extends JPanel{
 		add(btnComprar);
 			
 	}
-
+	
 	public JTextArea getEnunciado1() {
 		return enunciado1;
 	}
@@ -271,6 +277,14 @@ public class PanelUsuario extends JPanel{
 
 	public void setBtnComprar(JButton btnComprar) {
 		this.btnComprar = btnComprar;
+	}
+
+	public Mundo getMundo() {
+		return mundo;
+	}
+
+	public void setMundo(Mundo mundo) {
+		this.mundo = mundo;
 	}
 	
 	
