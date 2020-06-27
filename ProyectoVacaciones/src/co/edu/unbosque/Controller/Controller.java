@@ -1,8 +1,12 @@
 package co.edu.unbosque.Controller;
 
 import java.awt.Image;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.ArrayList;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -11,7 +15,7 @@ import javax.swing.JOptionPane;
 import co.edu.unbosque.Model.Mundo;
 import co.edu.unbosque.View.View;
 
-public class Controller implements ActionListener{
+public class Controller implements ActionListener, ItemListener{
 	
 	private View view;
 	private Mundo mundo;
@@ -21,7 +25,7 @@ public class Controller implements ActionListener{
 		view = new View(this);
 		mundo = new Mundo();
 		this.setActionListener();
-
+		
 	}
 	
 	public void setActionListener() {
@@ -33,6 +37,10 @@ public class Controller implements ActionListener{
 		view.getVentanaPrincipal().getPanelSignUpUsuario().getBtnRegresar().addActionListener(this);
 		
 		view.getVentanaPrincipal().getPanelUsuario().getBtnComprar().addActionListener(this);
+		
+		view.getVentanaPrincipal().getPanelUsuario().getCategorias().addItemListener(this);
+		view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItemListener(this);
+		view.getVentanaPrincipal().getPanelUsuario().getProductos().addItemListener(this);
 	}
 
 	@Override
@@ -54,6 +62,13 @@ public class Controller implements ActionListener{
 			view.getVentanaPrincipal().repaint();
 		}
 		if(e.getSource() == view.getVentanaPrincipal().getPanelUsuario().getBtnComprar()) {
+		}
+	}
+	
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource() == view.getVentanaPrincipal().getPanelUsuario().getCategorias()) {
 			seleccionarCategorias();
 		}
 	}
@@ -62,22 +77,37 @@ public class Controller implements ActionListener{
 
 		ImageIcon imagenCategorias;
 		Icon imagen2Categorias;
-
 		
-		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Videojuegos") {
+		String[] subcategoriasJuegos = {"PC", "XBOX", "PS", "NINTENDO"};
+		String[] subcategoriasAudiovisuales = {"Drama", "Accion", "Niños", "Ficcion", "Terror", "Comedia"};
+		String[] subcategoriasMusica = {"Pop", "Salsa", "Popular", "Merengue", "Reggaeton","Electronica" ,"Acustico"};
+
+
+				
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Juegos") {
 			imagenCategorias = new ImageIcon("src/imagenes/videojuegos5.jpg");
 			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(100, 150, Image.SCALE_DEFAULT));
 			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
+			for(int i= 0; i< subcategoriasJuegos.length; i++) {
+			view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItem(subcategoriasJuegos[i]);
+			    }
 		}
-		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Contenido Audiovisual") {
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Audiovisuales") {
 			imagenCategorias = new ImageIcon("src/imagenes/audiovisuales.jpg");
 			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT));
 			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
+			for(int i= 0; i< subcategoriasAudiovisuales.length; i++) {
+				view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItem(subcategoriasAudiovisuales[i]);
+				JOptionPane.showMessageDialog(null, subcategoriasAudiovisuales);
+				}
 		}
-		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Viajes") {
+		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Musica") {
 			imagenCategorias = new ImageIcon("src/imagenes/viajes2.jpg");
 			imagen2Categorias = new ImageIcon(imagenCategorias.getImage().getScaledInstance(200, 150, Image.SCALE_DEFAULT));
 			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
+			for(int i= 0; i< subcategoriasMusica.length; i++) {
+				view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItem(subcategoriasMusica[i]);
+				}
 		}
 	}
 	
@@ -208,6 +238,8 @@ public class Controller implements ActionListener{
 		  view.getVentanaPrincipal().getContentPane().add(view.getVentanaPrincipal().getPanelSignUpUsuario()); view.getVentanaPrincipal().repaint();
 		 
 	}
+
+	
 
 }
 

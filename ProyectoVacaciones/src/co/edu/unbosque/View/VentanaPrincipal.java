@@ -14,7 +14,7 @@ public class VentanaPrincipal extends JFrame{
 	private static final long serialVersionUID = 1L;
 	private PanelLogin panelLogin;
 	private PanelSignUpUsuario panelSignUpUsuario;
-	private PanelUsuario panelUsuario;
+	private PanelUsuarioCompras panelUsuario;
 	private PanelFondoLogin jContentPane = null;
 	
 	public VentanaPrincipal(Controller controller) {
@@ -44,7 +44,7 @@ public class VentanaPrincipal extends JFrame{
 		panelSignUpUsuario = new PanelSignUpUsuario();
 		panelSignUpUsuario.setBounds(20, 20, 450, 550);
 		
-		panelUsuario = new PanelUsuario();
+		panelUsuario = new PanelUsuarioCompras();
 		panelUsuario.setBounds(20,20,700,600);
 		
 		
@@ -81,10 +81,10 @@ public class VentanaPrincipal extends JFrame{
 	public void setjContentPane(PanelFondoLogin jContentPane) {
 		this.jContentPane = jContentPane;
 	}
-	public PanelUsuario getPanelUsuario() {
+	public PanelUsuarioCompras getPanelUsuario() {
 		return panelUsuario;
 	}
-	public void setPanelUsuario(PanelUsuario panelUsuario) {
+	public void setPanelUsuario(PanelUsuarioCompras panelUsuario) {
 		this.panelUsuario = panelUsuario;
 	}
 	

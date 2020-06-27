@@ -16,7 +16,7 @@ import javax.swing.border.TitledBorder;
 
 import co.edu.unbosque.Model.Mundo;
 
-public class PanelUsuario extends JPanel{
+public class PanelUsuarioCompras extends JPanel{
 	
 	/**
 	 * 
@@ -50,7 +50,7 @@ public class PanelUsuario extends JPanel{
 	
 	private JButton btnComprar;
 	
-	public PanelUsuario()  {
+	public PanelUsuarioCompras()  {
 		imagenCategoriasString = "";
 		imagenSubcategoriasString = "";
 		imagenAlmacenesString = "";
@@ -88,9 +88,13 @@ public class PanelUsuario extends JPanel{
 		categorias.setBounds(80, 190, 120,30);
 		categorias.setOpaque(false);
 		categorias.addItem("Categorias");
-		for(int i = 0; i<mundo.getUsuarioDAO().getUsuarios().size(); i++) {
-			categorias.addItem(mundo.getUsuarioDAO().getUsuarios().get(i).getNombre());
-			}
+		categorias.addItem("Juegos");
+		categorias.addItem("Audiovisuales");
+		categorias.addItem("Musica");
+		/*
+		 * for(int i = 0; i<mundo.getUsuarioDAO().getUsuarios().size(); i++) {
+		 * categorias.addItem(mundo.getUsuarioDAO().getUsuarios().get(i).getNombre()); }
+		 */
 		categorias.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(categorias);
 		
