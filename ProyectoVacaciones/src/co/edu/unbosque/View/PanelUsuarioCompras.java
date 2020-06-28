@@ -41,8 +41,8 @@ public class PanelUsuarioCompras extends JPanel{
 	private JComboBox<String> subcategorias;
 	private JLabel imagenSubcategorias;
 
-	private JComboBox<String> tiendas;
-	private JLabel imagenAlmacen;
+	private JComboBox<String> tipoProducto;
+	private JLabel imagentipoProducto;
 
 	private JComboBox<String>productos;
 
@@ -107,22 +107,18 @@ public class PanelUsuarioCompras extends JPanel{
 		add(subcategorias);
 		
 		
-		tiendas = new  JComboBox<String>();
-		tiendas.setBounds(765, 190, 120,30);
-		tiendas.setOpaque(false);
-		tiendas.addItem("Tienda");
-		tiendas.addItem("Samgsung");
-		tiendas.addItem("Apple");
-		tiendas.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
-		add(tiendas);
+		tipoProducto = new  JComboBox<String>();
+		tipoProducto.setBounds(765, 190, 120,30);
+		tipoProducto.setOpaque(false);
+		tipoProducto.addItem("Tipo");
+		tipoProducto.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
+		add(tipoProducto);
 		
 
 		productos = new  JComboBox<String>();
 		productos.setBounds(1130, 190, 120,30);
 		productos.setOpaque(false);
 		productos.addItem("Producto");
-		productos.addItem("IPHONE 11");
-		productos.addItem("IPHONE 11 PRO");
 		productos.setFont(new java.awt.Font("Calibri light",1,15));//entre comillas tipo de letra y despues el aungulo de inclinacion y tercero tamaño
 		add(productos);
 		
@@ -136,9 +132,9 @@ public class PanelUsuarioCompras extends JPanel{
 		add(imagenSubcategorias);
 		
 		
-		imagenAlmacen = new JLabel();
-		imagenAlmacen.setBounds(765,280,200,150);
-		add(imagenAlmacen);
+		imagentipoProducto = new JLabel();
+		imagentipoProducto.setBounds(765,280,200,150);
+		add(imagentipoProducto);
 		
 		
 	    infoProducto = new JTextArea("Informacion del producto: ");//se puede meter dos numeros (1: filas y 2:columnas) y si pongo un texto entre comillas es un texto predeterminado
@@ -219,20 +215,20 @@ public class PanelUsuarioCompras extends JPanel{
 		this.imagenSubcategorias = imagenSubcategorias;
 	}
 
-	public JComboBox<String> getTiendas() {
-		return tiendas;
+	public JComboBox<String> getTipoProducto() {
+		return tipoProducto;
 	}
 
-	public void setTiendas(JComboBox<String> tiendas) {
-		this.tiendas = tiendas;
+	public void setTipoProducto(JComboBox<String> tipoProducto) {
+		this.tipoProducto = tipoProducto;
 	}
 
-	public JLabel getImagenAlmacen() {
-		return imagenAlmacen;
+	public JLabel getImagentipoProducto() {
+		return imagentipoProducto;
 	}
 
-	public void setImagenAlmacen(JLabel imagenAlmacen) {
-		this.imagenAlmacen = imagenAlmacen;
+	public void setImagentipoProducto(JLabel imagentipoProducto) {
+		this.imagentipoProducto = imagentipoProducto;
 	}
 
 	public JComboBox<String> getProductos() {

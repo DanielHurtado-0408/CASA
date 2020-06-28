@@ -81,6 +81,10 @@ public class Controller implements ActionListener, ItemListener{
 		String[] subcategoriasJuegos = {"PC", "XBOX", "PS", "NINTENDO"};
 		String[] subcategoriasAudiovisuales = {"Drama", "Accion", "Niños", "Ficcion", "Terror", "Comedia"};
 		String[] subcategoriasMusica = {"Pop", "Salsa", "Popular", "Merengue", "Reggaeton","Electronica" ,"Acustico"};
+		
+		String[] tipoProductoJuegos = {"Digital", "Fisico"};
+		String[] tipoProductoAudiovisuales = {"Serie", "Pelicula"};
+		String[] tipoProductoMusica = {"Digital", "Fisico"};
 
 
 				
@@ -91,6 +95,9 @@ public class Controller implements ActionListener, ItemListener{
 			for(int i= 0; i< subcategoriasJuegos.length; i++) {
 			view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItem(subcategoriasJuegos[i]);
 			    }
+			for(int i = 0; i< tipoProductoJuegos.length;i++) {
+				view.getVentanaPrincipal().getPanelUsuario().getTipoProducto().addItem(tipoProductoJuegos[i]);
+			}
 		}
 		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Audiovisuales") {
 			imagenCategorias = new ImageIcon("src/imagenes/audiovisuales.jpg");
@@ -98,8 +105,10 @@ public class Controller implements ActionListener, ItemListener{
 			view.getVentanaPrincipal().getPanelUsuario().getImagenCategorias().setIcon(imagen2Categorias);
 			for(int i= 0; i< subcategoriasAudiovisuales.length; i++) {
 				view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItem(subcategoriasAudiovisuales[i]);
-				JOptionPane.showMessageDialog(null, subcategoriasAudiovisuales);
 				}
+			for(int i = 0; i<tipoProductoAudiovisuales.length; i++) {
+				view.getVentanaPrincipal().getPanelUsuario().getTipoProducto().addItem(tipoProductoAudiovisuales[i]);
+			}
 		}
 		if(view.getVentanaPrincipal().getPanelUsuario().getCategorias().getSelectedItem().toString() == "Musica") {
 			imagenCategorias = new ImageIcon("src/imagenes/viajes2.jpg");
@@ -108,6 +117,9 @@ public class Controller implements ActionListener, ItemListener{
 			for(int i= 0; i< subcategoriasMusica.length; i++) {
 				view.getVentanaPrincipal().getPanelUsuario().getSubcategorias().addItem(subcategoriasMusica[i]);
 				}
+			for(int i = 0; i< tipoProductoMusica.length; i++) {
+				view.getVentanaPrincipal().getPanelUsuario().getTipoProducto().addItem(tipoProductoMusica[i]);
+			}
 		}
 	}
 	
